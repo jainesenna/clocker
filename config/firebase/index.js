@@ -1,15 +1,16 @@
 import firebase from 'firebase/app'
+import 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAolcX-l2umFfA-2sC5LjKnFK4IMoR8NEo",
-  authDomain: "clockerwork01.firebaseapp.com",
-  projectId: "clockerwork01",
-  storageBucket: "clockerwork01.appspot.com",
-  messagingSenderId: "315092489072",
-  appId: "1:315092489072:web:48fe04cc08358c45aab5b5",
-  measurementId: "G-8ELH3TJF10"
-};
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
+}
 
-export default firebase.getApps.length 
-  ? firebase.app() 
+export default firebase.apps.length
+  ? firebase.app()
   : firebase.initializeApp(firebaseConfig)
