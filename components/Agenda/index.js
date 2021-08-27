@@ -8,7 +8,7 @@ export const Agenda = () => {
 
     return (
       <div>
-          <Button onClick={logout}>Sair</Button>
+          <Button colorScheme="red" onClick={logout}>Sair</Button>
       </div>
     )
 }
